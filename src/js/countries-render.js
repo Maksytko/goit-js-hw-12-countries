@@ -27,7 +27,7 @@ const render = function (array) {
 
     if (array.length > 10) {
         alert({
-            text: 'Notice me, senpai!',
+            text: 'Be gentle with me, senpai!',
         });
         return
     } else if (array.length > 1 && array.length < 10) {
