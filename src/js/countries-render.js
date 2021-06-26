@@ -16,7 +16,7 @@ const debounce = require('lodash.debounce')
 const resolve = function (response) {
     if (!response.ok) {
         alert({
-            text: 'Введите в строку название странц, которую необходимо найти',
+            text: 'Введите в строку название страны, которую необходимо найти',
         })
 
         return
