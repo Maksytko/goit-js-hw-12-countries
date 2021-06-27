@@ -13,18 +13,6 @@ const refs = {
 
 const debounce = require('lodash.debounce')
 
-const resolve = function (response) {
-    if (!response.ok) {
-        alert({
-            text: 'Введите в строку название страны, которую необходимо найти',
-        })
-
-        return
-    }
-
-    return response.json()
-}
-
 const render = function (array) {
     refs.countriesListEl.innerHTML = ''
     refs.countryInfoDivEl.innerHTML = ''
@@ -49,4 +37,4 @@ const render = function (array) {
     }
 }
 
-refs.searchInputEl.addEventListener('input', debounce((event) => (fetchCountries(event.target.value)).then(resolve).then(render).catch(console.log), 500))
+refs.searchInputEl.addEventListener('input', debounce((event) => (fetchCountries(event.target.value)).then(render).catch(console.log), 500))
