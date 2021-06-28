@@ -37,4 +37,4 @@ const render = function (array) {
     }
 }
 
-refs.searchInputEl.addEventListener('input', debounce((event) => (fetchCountries(event.target.value)).then(render), 500))
+refs.searchInputEl.addEventListener('input', debounce((event) => (fetchCountries(event.target.value)).then(render).catch(console.log), 500))
