@@ -12,6 +12,8 @@ export default function fetchCountries(name) {
         alert({
             text: 'Введите в строку название страны, которую необходимо найти',
         })
+
+        return []
     })
 }
 

@@ -23,7 +23,7 @@ const render = function (array) {
         });
 
         return
-    } else if (array.length > 1 && array.length < 10) {
+    } else if (array.length > 1 && array.length <= 10) {
         const countriesMarkUp = [...array].map(item => `<li><p>${item.name}<p></li>`).join('')
         refs.countriesListEl.innerHTML = countriesMarkUp
 
@@ -37,4 +37,4 @@ const render = function (array) {
     }
 }
 
-refs.searchInputEl.addEventListener('input', debounce((event) => (fetchCountries(event.target.value)).then(render).catch(console.log), 500))
+refs.searchInputEl.addEventListener('input', debounce((event) => (fetchCountries(event.target.value)).then(render), 500))
